@@ -11,7 +11,12 @@
 <script>
 function start() {
   let programs = {time:["Horário","time.js"]}
-
+  let base = document.createElement("h4");
+  let son = document.createElement("a");
+  base.appendChild(son);
+  let temp = base.cloneNode(true);
+  temp.firstChild.innerText = "teste";
+  document.body.appendChild(temp);
 }
 </script>
 </body>
