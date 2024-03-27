@@ -17,11 +17,13 @@ let paths = Object.values(programs);
 let base = document.createElement("h4");
 let son = document.createElement("a");
 base.appendChild(son);
-let temp = null;
+let temp, response, data;
 for(let i = 0; i < names.length; i++) {
   temp = base.cloneNode(true);
   temp.firstChild.innerText = names[i];
-  temp.firstChild.href = paths[i];
+  response = await fetch(paths[i]);
+  data = await response.text();
+  temp.firstChild.href = data;
   document.body.appendChild(temp);
 }
 }
