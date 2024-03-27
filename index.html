@@ -10,20 +10,20 @@
 <h4>Feito no celular entre as aulas (e um pouco no computador em casa) com amor por Bruno Leonel (7°C)</h4>
 <script>
 function start() {
-  let programs = {"Horário":"/time.js"}
+let programs = {"Horário":"/time.js"};
 
-  let names = programs.keys();
-  let paths = programs.values();
-  let base = document.createElement("h4");
-  let son = document.createElement("a");
-  base.appendChild(son);
-  let temp = null;
-  for(let i = 0; i < names.length, i++) {
-    temp = base.cloneNode(true);
-    temp.firstChild.innerText = names[i];
-    temp.firstChild.href = paths[i];
-    document.body.appendChild(temp);
-  }
+let names = Object.keys(programs);
+let paths = Object.values(programs);
+let base = document.createElement("h4");
+let son = document.createElement("a");
+base.appendChild(son);
+let temp = null;
+for(let i = 0; i < names.length; i++) {
+  temp = base.cloneNode(true);
+  temp.firstChild.innerText = names[i];
+  temp.firstChild.href = paths[i];
+  document.body.appendChild(temp);
+}
 }
 </script>
 </body>
